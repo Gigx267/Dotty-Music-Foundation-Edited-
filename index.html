@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotty Music Foundation | Empowering Nigerian Youth</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dotty-green: #22c55e;
+            --dotty-purple: #a855f7;
+            --dotty-orange: #f97316;
+            --dotty-black: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dotty-black);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .font-poster { font-family: 'Archivo Black', sans-serif; }
+
+        .paper-texture {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.12;
+            z-index: 100;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            mix-blend-mode: overlay;
+        }
+
+        .poster-frame {
+            background-color: var(--dotty-purple);
+            border: 10px solid var(--dotty-black);
+            border-radius: 48px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 0 2px rgba(255,255,255,0.05);
+        }
+
+        .orange-slice {
+            background-color: var(--dotty-orange);
+            clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        .btn-tag {
+            background: white;
+            color: black;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .btn-tag:hover {
+            background: var(--dotty-green);
+            transform: rotate(-3deg) scale(1.1);
+        }
+
+        .stat-badge {
+            background: var(--dotty-green);
+            color: black;
+            font-family: 'Archivo Black';
+            transform: rotate(-2deg);
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="paper-texture"></div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[200] bg-black p-8 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu" class="absolute top-8 right-8 text-white text-4xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html" class="font-poster text-4xl hover:text-green-500 uppercase tracking-tighter">Home</a>
+        <a href="About.html" class="font-poster text-4xl hover:text-orange-500 uppercase tracking-tighter">About Us</a>
+        <a href="mission.html" class="font-poster text-4xl hover:text-purple-500 uppercase tracking-tighter">Mission</a>
+        <a href="events.html" class="font-poster text-4xl hover:text-purple-500 uppercase tracking-tighter">Events</a>
+        <a href="projects.html" class="font-poster text-4xl hover:text-white uppercase tracking-tighter">Projects</a>
+        <a href="contact.html" class="font-poster text-4xl hover:text-white uppercase tracking-tighter">Contact</a>
+        <div class="mt-12 stat-badge">Nigerian Heart, Global Vision</div>
+    </div>
+
+    <main class="max-w-7xl mx-auto">
+        
+        <section class="poster-frame min-h-[90vh] flex flex-col">
+            <nav class="flex justify-between items-center p-6 md:p-8 z-30">
+                <img style="height: 2cm; border-radius: 50%;" src="logo.jpg" alt="Logo">
+                <div style="color: #efa46e;" class="text-2xl md:text-3xl font-poster tracking-tighter text-black uppercase leading-none">
+                    Dotty Music <br> Foundation
+                </div>
+                
+                <div class="hidden md:flex gap-3">
+                    <a href="index.html" class="btn-tag">Home</a>
+                    <a href="about.html" class="btn-tag">About Us</a>
+                    <a href="mission.html" class="btn-tag">Mission</a>
+                    <a href="events.html" class="btn-tag">Events</a>
+                    <a href="projects.html" class="btn-tag">Projects</a>
+                    <a href="contact.html" class="btn-tag">Contact</a>
+                </div>
+
+                <button id="menu-toggle" class="md:hidden text-black text-3xl p-2">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <div class="hidden lg:block text-black font-bold text-xs border-2 border-black px-3 py-1 rounded-full uppercase">
+                    Abuja HQ · Nigeria
+                </div>
+            </nav>
+
+            <div class="flex-grow grid md:grid-cols-2 relative">
+                <div class="p-8 md:p-16 flex flex-col justify-center z-20 text-black">
+                    <div class="stat-badge mb-6 text-lg md:text-xl uppercase">Platform for young creatives</div>
+                    <h1 class="text-[15vw] md:text-[8vw] font-poster leading-[0.85] tracking-tighter mb-8">
+                        BEYOND<br>SOUND.
+                    </h1>
+                    <div class="max-w-sm space-y-4">
+                        <p class="font-bold text-lg leading-tight uppercase">
+                            Empowering underprivileged Nigerian youth through music, fashion, dance, and mentorship—creating global opportunities.
+                        </p>
+                    </div>
+                    <div class="mt-10 flex gap-4">
+                        <button class="bg-black text-white px-8 py-4 font-poster text-lg hover:bg-white hover:text-black transition-colors uppercase">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="absolute inset-0 md:relative orange-slice overflow-hidden flex items-end justify-center opacity-40 md:opacity-100">
+                    <img src="https://i.pinimg.com/736x/b8/16/85/b81685d5b7db185cad86da6794eecc4c.jpg" 
+                         alt="Nigerian Music Scene" 
+                         class="h-full w-full object-cover mix-blend-multiply grayscale opacity-90">
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24 relative">
+            <div class="absolute -top-20 -left-10 text-[15vw] font-poster opacity-5 text-zinc-500 pointer-events-none uppercase">Leadership</div>
+            <div class="grid lg:grid-cols-12 gap-8 items-start relative z-10">
+                <div class="lg:col-span-7 bg-green-500 p-8 md:p-16 rounded-[40px] text-black shadow-[15px_15px_0px_0px_rgba(168,85,247,0.5)]">
+                    <h2 class="font-poster text-5xl md:text-7xl leading-none mb-8 uppercase tracking-tighter">ABOUT US .</h2>
+                    <div class="space-y-6 text-lg font-bold uppercase leading-tight">
+                        <p>We find the stars of tomorrow and give them the stage they deserve today.</p>
+                        <p class="opacity-80">
+                            Founded by Birmingham-born music executive Derek "Dotty" Odaro, the foundation emerged from a desire to bridge the gap between raw, natural ability and the resources required for a sustainable career.
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-orange-500 p-8 rounded-[40px] border-4 border-black rotate-2">
+                        <h3 class="font-poster text-2xl text-black uppercase mb-2">Derek Odaro</h3>
+                        <p class="text-black font-bold text-sm">Founder & CEO. Born in Birmingham, UK. A visionary leader dedicated to turning raw talent into global icons.</p>
+                    </div>
+                    <div class="bg-purple-500 p-8 rounded-[40px] border-4 border-black -rotate-2">
+                        <h3 class="font-poster text-2xl text-black uppercase mb-2">Mya Odaro</h3>
+                        <p class="text-black font-bold text-sm">Co-Founder. Born in Milton Keynes, UK. Bringing fresh creative perspective and strategic leadership to the foundation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="bg-zinc-900 p-8 border-t-8 border-green-500">
+                <h3 class="font-poster text-2xl text-green-500 mb-4 uppercase">The Mission</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">To empower youth through accessible music education and mentorship. We leverage the universal language of music to transform lives, build unity, and create sustainable careers.</p>
+            </div>
+            <div class="bg-zinc-900 p-8 border-t-8 border-orange-500">
+                <h3 class="font-poster text-2xl text-orange-500 mb-4 uppercase">Artist Support</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">We provide development for the next generation of stars. We recently empowered <strong>SOUNDBOI</strong>, our Nov 2023 winner, for his professional video shoot and music promotion.</p>
+            </div>
+            <div class="bg-zinc-900 p-8 border-t-8 border-purple-500">
+                <h3 class="font-poster text-2xl text-purple-500 mb-4 uppercase">Talent Hunts</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Our talent shows provide a national stage. Our 2023 finale awarded over ₦1.8 million in prizes and management deals to Abuja's brightest young creatives.</p>
+            </div>
+        </section>
+
+        <section class="mt-6 grid md:grid-cols-3 gap-6">
+            <div class="bg-zinc-900 p-8 border-t-8 border-blue-500">
+                <h3 class="font-poster text-2xl text-blue-500 mb-4 uppercase">Label Signing</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Winners receive direct signing to Derek Odaro's personal record label, ensuring professional recording, distribution, and industry integration.</p>
+            </div>
+            <div class="bg-zinc-900 p-8 border-t-8 border-yellow-500">
+                <h3 class="font-poster text-2xl text-yellow-500 mb-4 uppercase">Management</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Runners-up secure management contracts, receiving structured career development and exposure to the global music market.</p>
+            </div>
+            <div class="bg-zinc-900 p-8 border-t-8 border-red-500">
+                <h3 class="font-poster text-2xl text-red-500 mb-4 uppercase">Equipment</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Beyond cash, we provide musical equipment through our sponsors, giving participants the tools they need to continue their craft.</p>
+            </div>
+        </section>
+
+        <section class="mt-24 px-2">
+            <div class="bg-green-500 p-8 md:p-20 rounded-[40px] border-8 border-black shadow-[15px_15px_0px_0px_rgba(168,85,247,1)] relative overflow-hidden">
+                <div class="relative z-10 text-black">
+                    <h2 class="font-poster text-4xl md:text-6xl mb-8 leading-none uppercase tracking-tighter">Building <span class="bg-black text-green-500 px-2">Futures</span>,<br>Not Handouts.</h2>
+                    <div class="bg-white p-6 mb-8 -rotate-1 border-4 border-black font-bold text-lg md:text-xl italic">
+                        "It’s about creating platforms so young people can feed themselves..."
+                    </div>
+                    <button class="bg-orange-500 text-black font-poster text-lg px-8 py-4 rounded-full border-4 border-black hover:bg-black hover:text-orange-500 transition-all">
+                        INVEST IN DREAMS →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-32 pb-12 px-2">
+            <div class="bg-zinc-900 rounded-[40px] p-8 md:p-20 border-x-4 border-t-4 border-purple-500">
+                <div class="grid md:grid-cols-2 gap-12 items-end">
+                    <div class="text-center md:text-left">
+                        <h3 class="font-poster text-5xl text-white mb-8 tracking-tighter uppercase leading-none">Speak <span class="text-orange-500">With Us</span></h3>
+                        <div class="inline-block bg-green-500 text-black p-4 -rotate-1 border-4 border-black">
+                            <p class="font-bold text-xs uppercase mb-1">Call / WhatsApp</p>
+                            <p class="font-poster text-xl md:text-3xl">+234 809 741 0055</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 text-center text-zinc-500 font-bold text-[10px] uppercase tracking-[0.2em]">
+                    © 2026 Dotty Music Foundation. Abuja, NG.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <div id="music-container" class="fixed bottom-[30px] right-[30px] z-[9999] flex items-center gap-3 bg-black border-4 border-purple-500 p-2 px-4 rounded-full shadow-[8px_8px_0px_0px_#22c55e]">
+        <div class="disc-animation w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center border-2 border-black">
+            <i class="fa-solid fa-compact-disc text-black"></i>
+        </div>
+        <div class="flex flex-col">
+            <button id="toggleMusic" class="font-poster text-[10px] text-white uppercase tracking-wider text-left">Play Audio</button>
+            <div class="flex items-center gap-2">
+                <div class="status-dot w-2 h-2 bg-red-500 rounded-full"></div>
+                <span id="musicStatus" class="text-[8px] font-bold uppercase text-white opacity-50">Off-Air</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="Fela Kuti - Shakara.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bgMusic = document.getElementById('bgMusic');
+        const toggleBtn = document.getElementById('toggleMusic');
+        const container = document.getElementById('music-container');
+        const statusText = document.getElementById('musicStatus');
+        const statusDot = document.querySelector('.status-dot');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        function updateUI(isPlaying) {
+            if (isPlaying) {
+                container.classList.add('playing');
+                toggleBtn.innerText = "Mute Audio";
+                statusText.innerText = "Now Playing";
+                statusDot.style.background = "#22c55e";
+                statusDot.style.boxShadow = "0 0 10px #22c55e";
+            } else {
+                container.classList.remove('playing');
+                toggleBtn.innerText = "Play Audio";
+                statusText.innerText = "Off-Air";
+                statusDot.style.background = "#ef4444";
+                statusDot.style.boxShadow = "none";
+            }
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                updateUI(true);
+            } else {
+                bgMusic.pause();
+                updateUI(false);
+            }
+        });
+
+        // Disc rotation animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+            .playing .disc-animation { animation: spin 3s linear infinite; }
+        `;
+        document.head.append(style);
+    </script>
+</body>
+</html>

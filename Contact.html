@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dotty Music Foundation</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dotty-green: #22c55e;
+            --dotty-purple: #a855f7;
+            --dotty-orange: #f97316;
+            --dotty-black: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dotty-black);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .font-poster { font-family: 'Archivo Black', sans-serif; }
+
+        .paper-texture {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.12;
+            z-index: 100;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            mix-blend-mode: overlay;
+        }
+
+        .btn-tag {
+            background: white;
+            color: black;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .btn-tag:hover {
+            background: var(--dotty-green);
+            transform: rotate(-3deg) scale(1.1);
+        }
+
+        .contact-input {
+            background: transparent;
+            border-bottom: 4px solid #333;
+            padding: 1rem 0;
+            width: 100%;
+            font-weight: 700;
+            text-transform: uppercase;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .contact-input:focus {
+            border-color: var(--dotty-green);
+        }
+
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="paper-texture"></div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[200] bg-black p-8 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu" class="absolute top-8 right-8 text-white text-4xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html" class="font-poster text-4xl hover:text-green-500 uppercase tracking-tighter">Home</a>
+        <a href="about.html" class="font-poster text-4xl hover:text-orange-500 uppercase tracking-tighter">About Us</a>
+        <a href="mission.html" class="font-poster text-4xl hover:text-purple-500 uppercase tracking-tighter">Mission</a>
+        <a href="events.html" class="font-poster text-4xl hover:text-purple-500 uppercase tracking-tighter">Events</a>
+        <a href="projects.html" class="font-poster text-4xl hover:text-white uppercase tracking-tighter">Projects</a>
+        <a href="contact.html" class="font-poster text-4xl text-white uppercase tracking-tighter">Contact</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto">
+        
+        <nav class="flex justify-between items-center p-6 md:p-8 mb-12">
+            <div class="flex items-center gap-4">
+                <img style="height: 1.5cm; border-radius: 50%;" src="logo.jpg" alt="Logo">
+                <div style="color: #efa46e;" class="text-xl md:text-2xl font-poster tracking-tighter uppercase leading-none">
+                    Dotty Music <br> Foundation
+                </div>
+            </div>
+            
+            <div class="hidden md:flex gap-3">
+                <a href="index.html" class="btn-tag">Home</a>
+                <a href="about.html" class="btn-tag">About Us</a>
+                <a href="mission.html" class="btn-tag">Mission</a>
+                <a href="events.html" class="btn-tag">Events</a>
+                <a href="projects.html" class="btn-tag">Projects</a>
+                <a href="contact.html" class="btn-tag bg-white text-black">Contact</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-white text-3xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </nav>
+
+        <section class="grid lg:grid-cols-2 gap-16 mt-12 lg:mt-24">
+            
+            <div class="flex flex-col justify-center">
+                <h1 class="text-7xl md:text-9xl font-poster uppercase leading-[0.85] mb-12 tracking-tighter">
+                    SEND A <br> <span class="text-green-500">SIGNAL.</span>
+                </h1>
+                
+                <div class="space-y-12">
+                    <div class="flex items-start gap-6">
+                        <div class="bg-purple-500 p-4 rounded-full text-black">
+                            <i class="fa-solid fa-phone-volume text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-poster text-xl uppercase">Call / WhatsApp</p>
+                            <p class="text-2xl md:text-3xl font-black text-zinc-400">+234 809 741 0055</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6">
+                        <div class="bg-orange-500 p-4 rounded-full text-black">
+                            <i class="fa-solid fa-location-dot text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-poster text-xl uppercase">Abuja HQ</p>
+                            <p class="text-xl font-bold text-zinc-400 uppercase leading-tight">Federal Capital Territory,<br> Abuja, Nigeria.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 mt-12">
+                        <a href=" https://www.instagram.com/dotty.music.foundation/" class="text-3xl hover:text-green-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href=" https://twitter.com/DottyMusicFdn" class="text-3xl hover:text-purple-500 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=" https://www.facebook.com/DottyMusicFoundation" class="text-3xl hover:text-orange-500 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-zinc-900 p-8 md:p-12 rounded-[40px] border-4 border-zinc-800 shadow-[20px_20px_0px_0px_#22c55e]">
+                <form action="#" class="space-y-8">
+                    <div>
+                        <label class="font-poster text-xs text-zinc-500 tracking-widest uppercase">Full Name</label>
+                        <input type="text" class="contact-input" placeholder="WHO ARE YOU?">
+                    </div>
+                    
+                    <div>
+                        <label class="font-poster text-xs text-zinc-500 tracking-widest uppercase">Email / Phone</label>
+                        <input type="text" class="contact-input" placeholder="HOW DO WE REACH YOU?">
+                    </div>
+
+                    <div>
+                        <label class="font-poster text-xs text-zinc-500 tracking-widest uppercase">Your Message</label>
+                        <textarea rows="4" class="contact-input" placeholder="WHAT'S THE VISION?"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-white text-black font-poster text-2xl py-6 hover:bg-green-500 hover:scale-[1.02] transition-all uppercase">
+                        Send Message →
+                    </button>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="mt-32 text-center pb-12">
+            <div class="font-poster text-[12vw] opacity-5 pointer-events-none uppercase">DMF 2026</div>
+            <p class="text-zinc-500 font-bold uppercase text-xs tracking-[0.5em]">Dotty Music Foundation · Empowering The Youth</p>
+        </footer>
+
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+</html>
