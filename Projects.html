@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | Dotty Music Foundation</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dotty-green: #22c55e;
+            --dotty-purple: #a855f7;
+            --dotty-orange: #f97316;
+            --dotty-black: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dotty-black);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .font-poster { font-family: 'Archivo Black', sans-serif; }
+
+        .paper-texture {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.12;
+            z-index: 100;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            mix-blend-mode: overlay;
+        }
+
+        .btn-tag {
+            background: white;
+            color: black;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .btn-tag:hover {
+            background: var(--dotty-green);
+            transform: rotate(-3deg) scale(1.1);
+        }
+
+        .project-card {
+            background: #111;
+            border-radius: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            border-color: var(--dotty-orange);
+        }
+
+        #mobile-menu {
+            transition: transform 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="paper-texture"></div>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[200] bg-black p-8 flex flex-col justify-center items-center gap-8">
+        <button id="close-menu" class="absolute top-8 right-8 text-white text-4xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="index.html" class="font-poster text-4xl hover:text-green-500 uppercase tracking-tighter">Home</a>
+        <a href="about.html" class="font-poster text-4xl hover:text-orange-500 uppercase tracking-tighter">About Us</a>
+        <a href="mission.html" class="font-poster text-4xl hover:text-purple-500 uppercase tracking-tighter">Mission</a>
+        <a href="events.html" class="font-poster text-4xl hover:text-purple-500 uppercase tracking-tighter">Events</a>
+        <a href="projects.html" class="font-poster text-4xl text-white uppercase tracking-tighter">Projects</a>
+        <a href="contact.html" class="font-poster text-4xl hover:text-white uppercase tracking-tighter">Contact</a>
+    </div>
+
+    <main class="max-w-7xl mx-auto">
+        
+        <nav class="flex justify-between items-center p-6 md:p-8 mb-12">
+            <div class="flex items-center gap-4">
+                <img style="height: 1.5cm; border-radius: 50%;" src="logo.jpg" alt="Logo">
+                <div style="color: #efa46e;" class="text-xl md:text-2xl font-poster tracking-tighter uppercase leading-none">
+                    Dotty Music <br> Foundation
+                </div>
+            </div>
+            
+            <div class="hidden md:flex gap-3">
+                <a href="index.html" class="btn-tag">Home</a>
+                <a href="about.html" class="btn-tag">About Us</a>
+                <a href="mission.html" class="btn-tag">Mission</a>
+                <a href="events.html" class="btn-tag">Events</a>
+                <a href="projects.html" class="btn-tag bg-white text-black">Projects</a>
+                <a href="contact.html" class="btn-tag">Contact</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-white text-3xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </nav>
+
+        <section class="mb-20">
+            <h1 class="text-7xl md:text-9xl font-poster uppercase tracking-tighter leading-none mb-6">
+                PROOF OF <br> <span class="text-orange-500">IMPACT.</span>
+            </h1>
+            <p class="max-w-xl font-bold uppercase text-zinc-400">
+                From local talent hunts to signing the next Afrobeats superstars, we don't just talk—we build. Explore our track record of empowering Nigerian youth.
+            </p>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-12">
+            
+            <div class="project-card flex flex-col">
+                <div class="h-64 bg-zinc-800 relative overflow-hidden">
+                    <img src="f1.png" alt="Talent Hunt" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute top-4 left-4 bg-green-500 text-black font-poster px-4 py-1 text-sm uppercase">Completed</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-poster text-3xl uppercase mb-4">The 2023 Talent Hunt Finale</h3>
+                    <p class="text-zinc-400 font-bold uppercase text-xs mb-4">Location: Transcorp Hilton, Abuja</p>
+                    <p class="text-sm leading-relaxed mb-6">Our flagship talent show that brought together over 500 participants. We awarded ₦1.8 million in cash prizes and management deals to the top 3 performers, judged by icons like Shina Rambo.</p>
+                    <div class="flex gap-2">
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Music</span>
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Mentorship</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card flex flex-col">
+                <div class="h-64 bg-zinc-800 relative overflow-hidden">
+                    <img src="pp (3).jpg" alt="Freshgee Signing" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute top-4 left-4 bg-purple-500 text-black font-poster px-4 py-1 text-sm uppercase">Ongoing</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-poster text-3xl uppercase mb-4">Freshgee Artist Development</h3>
+                    <p class="text-zinc-400 font-bold uppercase text-xs mb-4">Project: Artist Signing & Branding</p>
+                    <p class="text-sm leading-relaxed mb-6">Taking talent from the streets to the studio. We signed Afrobeats artist Freshgee, providing full professional recording, music video production, and industry distribution.</p>
+                    <div class="flex gap-2">
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Record Label</span>
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Marketing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card flex flex-col">
+                <div class="h-64 bg-zinc-800 relative overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center bg-orange-500 text-black font-poster text-4xl">EQUIPMENT</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-poster text-3xl uppercase mb-4">Gear For Creatives</h3>
+                    <p class="text-zinc-400 font-bold uppercase text-xs mb-4">Impact: 50+ Beneficiaries</p>
+                    <p class="text-sm leading-relaxed mb-6">Distribution of musical instruments, studio microphones, and dance gear to underprivileged youth in Abuja suburbs to ensure they have the tools to practice their craft.</p>
+                    <div class="flex gap-2">
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Sponsorship</span>
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Empowerment</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card flex flex-col">
+                <div class="h-64 bg-zinc-800 relative overflow-hidden">
+                    <img src="pp (4).jpg" alt="Youth Sports" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute top-4 left-4 bg-blue-500 text-black font-poster px-4 py-1 text-sm uppercase">Community</div>
+                </div>
+                <div class="p-8">
+                    <h3 class="font-poster text-3xl uppercase mb-4">Youth Sports Initiative</h3>
+                    <p class="text-zinc-400 font-bold uppercase text-xs mb-4">Project: Unity Through Football</p>
+                    <p class="text-sm leading-relaxed mb-6">Beyond music, we've organized community football tournaments to foster unity and discipline among youth, providing jerseys and professional coaching clinics.</p>
+                    <div class="flex gap-2">
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Sports</span>
+                        <span class="border border-zinc-700 px-3 py-1 text-[10px] font-bold uppercase">Youth Unity</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="mt-32 px-4">
+            <div class="bg-green-500 p-8 md:p-20 rounded-[40px] text-black text-center relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="font-poster text-4xl md:text-7xl uppercase mb-8 leading-none">Your Project <br> Could Be Next.</h2>
+                    <p class="font-bold uppercase mb-10 text-xl italic">Are you a creative with a vision but no resources?</p>
+                    <a href="contact.html" class="inline-block bg-black text-white font-poster text-lg px-12 py-5 hover:bg-white hover:text-black transition-all uppercase">
+                        APPLY FOR SUPPORT →
+                    </a>
+                </div>
+                <div class="absolute -bottom-10 -right-10 font-poster text-[20vw] opacity-10 pointer-events-none uppercase">BUILD</div>
+            </div>
+        </section>
+
+        <footer class="mt-32 pb-12 flex justify-between items-center border-t border-zinc-800 pt-8">
+            <div class="font-poster text-xl opacity-50 uppercase tracking-tighter">DMF PROJECTS</div>
+            <div class="text-[10px] font-bold uppercase text-zinc-600">© 2026 Abuja, Nigeria.</div>
+        </footer>
+
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+</html>
