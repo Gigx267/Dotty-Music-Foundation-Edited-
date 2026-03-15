@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Support | Dotty Music Foundation</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dotty-green: #22c55e;
+            --dotty-purple: #a855f7;
+            --dotty-orange: #f97316;
+            --dotty-black: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dotty-black);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .font-poster { font-family: 'Archivo Black', sans-serif; }
+
+        .paper-texture {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+            z-index: 100;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            mix-blend-mode: overlay;
+        }
+
+        /* Form Styling */
+        input, select, textarea {
+            background: #151515 !important;
+            border: 3px solid #2a2a2a !important;
+            color: white !important;
+            padding: 1.2rem !important;
+            border-radius: 0 !important;
+            text-transform: uppercase;
+            font-weight: 700;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--dotty-green) !important;
+            background: #1a1a1a !important;
+            outline: none;
+            box-shadow: 8px 8px 0px 0px var(--dotty-purple);
+        }
+
+        label {
+            font-family: 'Archivo Black', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.6rem;
+            display: block;
+            color: var(--dotty-orange);
+        }
+
+        .form-card {
+            background: #0f0f0f;
+            border: 10px solid #1a1a1a;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-header {
+            border-bottom: 2px solid #2a2a2a;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-tag {
+            background: white;
+            color: black;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-tag:hover {
+            background: var(--dotty-green);
+            transform: rotate(-3deg);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--dotty-black); }
+        ::-webkit-scrollbar-thumb { background: #333; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--dotty-purple); }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <div class="paper-texture"></div>
+
+    <nav class="max-w-5xl mx-auto flex justify-between items-center mb-16 relative z-[110]">
+        <a href="index.html" class="flex items-center gap-4">
+            <img style="height: 60px; border-radius: 50%;" src="logo.jpg" alt="Logo">
+            <span class="font-poster text-xl tracking-tighter hidden md:block uppercase">Dotty Music<br>Foundation</span>
+        </a>
+        <div class="flex gap-4">
+            <a href="index.html" class="btn-tag">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto relative">
+        
+        <header class="mb-16 text-center md:text-left relative">
+            <div class="inline-block bg-green-500 text-black font-poster px-4 py-2 mb-6 -rotate-2">
+                OPEN CALL FOR 2026
+            </div>
+            <h1 class="text-[12vw] md:text-[7vw] font-poster leading-[0.85] tracking-tighter uppercase mb-6">
+                APPLY FOR<br><span class="text-purple-500">SUPPORT.</span>
+            </h1>
+            <p class="max-w-xl font-bold text-lg text-zinc-400 uppercase leading-tight">
+                Tell us about your dream. We provide the funding, mentorship, and platform to take your creative career to the global stage.
+            </p>
+        </header>
+
+        <div class="form-card p-6 md:p-16 shadow-[20px_20px_0px_0px_rgba(34,197,94,0.3)]">
+            
+            <form action=" https://formspree.io/f/mnjgbbrz" method="POST">
+                
+                <div class="section-header">
+                    <h3 class="font-poster text-xl text-purple-500 tracking-widest uppercase">01. The Creative</h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label>Full Legal Name</label>
+                        <input type="text" name="full_name" placeholder=" " required>
+                    </div>
+                    <div>
+                        <label>Stage / Creative Name</label>
+                        <input type="text" name="stage_name" placeholder="" required>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1">
+                        <label>WhatsApp Number</label>
+                        <input type="tel" name="phone" placeholder="+234..." required>
+                    </div>
+                    <div class="md:col-span-1">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="YOUR@EMAIL.COM" required>
+                    </div>
+                    <div class="md:col-span-1">
+                        <label>Current Location</label>
+                        <input type="text" name="location" placeholder="E.G. ABUJA, NG" required>
+                    </div>
+                </div>
+
+                <div class="section-header">
+                    <h3 class="font-poster text-xl text-orange-500 tracking-widest uppercase">02. The Project</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label>Main Discipline</label>
+                        <select name="discipline" required>
+                            <option value="" disabled selected>CHOOSE YOUR CRAFT</option>
+                            <option value="music">MUSIC (EP/SINGLE/VIDEO)</option>
+                            <option value="fashion">FASHION (COLLECTION)</option>
+                            <option value="dance">DANCE PRODUCTION</option>
+                            <option value="acting">ACTING / FILM</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Project Title</label>
+                        <input type="text" name="project_title" placeholder="WHAT ARE WE CALLING THIS?" required>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <label>The Elevator Pitch (One Sentence)</label>
+                    <input type="text" name="elevator_pitch" placeholder="DESCRIBE YOUR PROJECT IN 30 WORDS OR LESS" required>
+                </div>
+
+                <div class="mb-8">
+                    <label>Full Project Vision</label>
+                    <textarea name="vision" rows="5" placeholder="WHAT ARE YOU CREATING? WHY DOES IT NEED TO EXIST NOW?" required></textarea>
+                </div>
+
+                <div class="section-header">
+                    <h3 class="font-poster text-xl text-green-500 tracking-widest uppercase">03. The Hustle</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <label>Biggest Barrier</label>
+                        <textarea name="barrier" rows="3" placeholder="BESIDES MONEY, WHAT IS HOLDING YOU BACK?" required></textarea>
+                    </div>
+                    <div>
+                        <label>Budget Breakdown</label>
+                        <textarea name="budget" rows="3" placeholder="HOW WILL YOU SPEND THE FUNDING? (E.G. STUDIO: 100K, MARKETING: 50K)" required></textarea>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <label>Future Impact</label>
+                    <textarea name="impact" rows="3" placeholder="WHERE DO YOU SEE YOURSELF 12 MONTHS AFTER THIS PROJECT?" required></textarea>
+                </div>
+
+                <div class="section-header">
+                    <h3 class="font-poster text-xl text-blue-500 tracking-widest uppercase">04. Proof of Work</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div>
+                        <label>Social Media (IG / TikTok)</label>
+                        <input type="text" name="social_handle" placeholder="@USERNAME">
+                    </div>
+                    <div>
+                        <label>Portfolio Link / Drive / YouTube</label>
+                        <input type="url" name="portfolio_link" placeholder="HTTPS://..." required>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-purple-600 translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform"></div>
+                    <button type="submit" class="relative w-full bg-white text-black font-poster text-3xl py-8 border-4 border-black hover:bg-green-500 transition-colors uppercase">
+                        Submit Application →
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+        <footer class="mt-20 pb-12 flex flex-col md:flex-row justify-between items-center text-zinc-600 gap-6">
+            <p class="font-poster text-[10px] uppercase tracking-widest">© 2026 Dotty Music Foundation. Abuja HQ.</p>
+            <div class="flex gap-6 text-xl">
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="hover:text-white"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Simple entry animation
+        window.addEventListener('load', () => {
+            document.querySelector('main').style.opacity = '0';
+            document.querySelector('main').style.transition = 'opacity 1s ease';
+            setTimeout(() => {
+                document.querySelector('main').style.opacity = '1';
+            }, 100);
+        });
+    </script>
+
+</body>
+</html>
